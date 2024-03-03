@@ -1,9 +1,11 @@
 version: '3.8'
 
+#create a seperate docker bridge network for the monitoring stack
 networks:
   monitoring:
     driver: bridge
 
+#create 2 seperate docker volumes to persist the prom & grafana data, resp.
 volumes:
   prometheus_data:
     driver: local
